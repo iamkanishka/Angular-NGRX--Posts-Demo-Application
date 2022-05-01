@@ -56,3 +56,6 @@ So We will be Looking These Angular-NGRX  features and Learn as we go on.
 2. Create a Service class foe the ngrx Data Extending Entity CollectionServiceBase Calss - Angular
 3. Get the Data from the Store using entities$ method with NGRX Data without HTTP Call - Angular
 4. Implement the Add Post Form using Ngrx Data in the Angular Ngrx Application
+6. Update Post Details using NGRX Data with custom Update serveice entity in Ngrx Angular App
+7. Delete Post Data using Ngrx Data. Understand Optimistic and pessimistic Update and Delete
+8.  

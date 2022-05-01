@@ -1,7 +1,13 @@
 import { EntityDataModuleConfig, EntityMetadataMap } from '@ngrx/data';
  
 const entityMetadata: EntityMetadataMap = {
-Post: {}
+Post: {
+ // entityDispatcherOptions:{
+    //we can use     optimisticUpdate: true  oonly if we want to update the post before updateing in the backend
+    //Note : Dont use      optimisticUpdate: true , or any of teh optimistic features Dont Show until it has been updated in the backend
+    //optimisticUpdate: true
+  //}
+}
 };
  
 // because the plural of "hero" is not "heros"

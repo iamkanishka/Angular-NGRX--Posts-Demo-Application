@@ -20,9 +20,9 @@
                 <td>{{post.id}}</td>
                 <td>{{post.title}}</td>
                 <td>{{post.description}}</td>
-                <!-- <td><button class="btn btn-info" [routerLink]="['details/', post.id]">View</button></td>
-                 <td><button class="btn btn-primary" [routerLink]="['edit-post/', post.id]">Update</button></td>
-                <td><button class="btn btn-danger" (click)="ondeletePost(post.id)" >Delete</button></td> -->
+                <!-- <td><button class="btn btn-info" [routerLink]="['details/', post.id]">View</button></td> -->
+                 <td><button class="btn btn-primary" [routerLink]="[ 'edit',post.id]">Update</button></td>
+                <td><button class="btn btn-danger" (click)="ondeletePost($event,post.id!)" >Delete</button></td>
     
     
                 

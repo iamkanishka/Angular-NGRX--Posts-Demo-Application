@@ -1,1 +1,25 @@
-<p>edit-post works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <h3>Edit Post</h3>
+        <hr/>
+        <form [formGroup]="postForm">
+            <div class="mb-3">
+                <label>Title</label>
+                <input formControlName="title" type="text" class="form-control">
+                <!-- <div  class="help-block"  > {{handleTitleErrors()}} </div> -->
+            
+            </div>
+            <div class="mb-3">
+                <label>Description</label>
+                <textarea formControlName="description" type="text" class="form-control" rows="3"></textarea>
+                <!-- <div  class="help-block"    >{{handleDescriptionErrors()}}</div> -->
+                
+
+            </div>
+
+            <div class="my-3">
+                <button class="btn btn-primary"  (click)="onUpdatePost()" [disabled]="this.postForm.invalid" >Update Post</button>
+            </div>
+        </form>
+    </div>
+</div>

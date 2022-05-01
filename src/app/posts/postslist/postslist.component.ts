@@ -19,4 +19,10 @@ posts$:Observable<Post[]>;
   ngOnInit(): void {
   }
 
+  ondeletePost(event :Event,id:string){
+    if(confirm("Sure you want you Delete Post")){
+this.postService.delete(id)
+    }
+  }
+
 }
