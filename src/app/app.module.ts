@@ -12,9 +12,10 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment.prod';
 import { EffectsModule } from '@ngrx/effects';
-import { EntityDataModule } from '@ngrx/data';
+import { EntityDataModule, EntityDataService } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
 import { HttpClientModule } from '@angular/common/http';
+import { PostDataServiceService } from './posts/service/post-data-service.service';
 
 @NgModule({
   declarations: [
@@ -41,4 +42,9 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(entityDataService: EntityDataService,postDataService:PostDataServiceService){
+    entityDataService.registerService('Post',postDataService)
+  }
+ }
