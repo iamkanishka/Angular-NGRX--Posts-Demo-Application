@@ -21,7 +21,7 @@ posts$:Observable<Post[]>;
 
   ondeletePost(event :Event,id:string){
     if(confirm("Sure you want you Delete Post")){
-this.postService.delete(id)
+   this.postService.delete(id)
     }
   }
 

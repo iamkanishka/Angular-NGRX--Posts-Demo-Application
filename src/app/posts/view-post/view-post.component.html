@@ -1,1 +1,12 @@
-<p>view-post works!</p>
+<div>
+    <h2>View Post</h2>
+    <div *ngIf="post" > 
+        <div>Id: {{post.id}}</div>
+    <div>Title: {{post.title}}</div>
+    <div>Description: {{post.description}}</div>
+         
+</div>
+
+</div>
+
+<div><a [routerLink]="['/posts']">Back to Posts</a></div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Post } from 'src/app/Models/posts.model';
+import { PostService } from '../service/post.service';
 
 @Component({
   selector: 'app-view-post',
@@ -7,7 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewPostComponent implements OnInit {
 
-  constructor() { }
+post!:Post | undefined
+ 
+  constructor( private postService:PostService , private router: Router, private activatedRoute:ActivatedRoute){ 
+  const id = this.activatedRoute.snapshot.params['id']
+
+
+    this.postService.entities$.subscribe((posts)=>{
+      if(posts.length){
+     this.post = posts.find((post)=>post.id=== id)
+      }
+    })
+  }
 
   ngOnInit(): void {
   }

@@ -58,4 +58,6 @@ So We will be Looking These Angular-NGRX  features and Learn as we go on.
 4. Implement the Add Post Form using Ngrx Data in the Angular Ngrx Application
 6. Update Post Details using NGRX Data with custom Update serveice entity in Ngrx Angular App
 7. Delete Post Data using Ngrx Data. Understand Optimistic and pessimistic Update and Delete
-8.  
+8. Show the Single Post Details using Ngrx Data in the Angular Ngrx Application
+9. Use Ngrx Data in the Lazy Loaded Modules in the Ngrx Angular Apllication
+10. Completing Angular Ngrx Course with Re-vision

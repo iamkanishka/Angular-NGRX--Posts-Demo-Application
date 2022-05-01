@@ -25,8 +25,10 @@ export class EditPostComponent implements OnInit {
     })
 
     this.postService.entities$.subscribe((posts)=>{
+      if(posts.length){
       const post = posts.find((post)=>post.id===this.id)
       this.postForm.patchValue({title:post?.title,description:post?.description})
+      }
     })
   }
 

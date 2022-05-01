@@ -10,13 +10,13 @@ import { PostService } from '../service/post.service';
   styleUrls: ['./add-post.component.scss']
 })
 export class AddPostComponent implements OnInit {
-  postForm:FormGroup
+  postForm: FormGroup
 
- 
-  constructor( private postService:PostService , private router: Router){ 
+
+  constructor(private postService: PostService, private router: Router) {
     this.postForm = new FormGroup({
-      title: new FormControl(null,[Validators.required, Validators.minLength(5)]),
-      description: new FormControl(null,[Validators.required, Validators.minLength(5)])
+      title: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+      description: new FormControl(null, [Validators.required, Validators.minLength(5)])
 
     })
   }
@@ -24,17 +24,17 @@ export class AddPostComponent implements OnInit {
   }
 
 
-  onAddPost(){
+  onAddPost() {
     console.log(this.postForm.value);
-    const post:Post ={
-      title : this.postForm.value.title,
-      description : this.postForm.value.description
+    const post: Post = {
+      title: this.postForm.value.title,
+      description: this.postForm.value.description
     }
-    this.postService.add(post).subscribe((data)=>{
+    this.postService.add(post).subscribe((data) => {
       this.router.navigate(['/posts'])
     })
 
-    
-  
+
+
   }
 }
