@@ -5,9 +5,9 @@ Post: {}
 };
  
 // because the plural of "hero" is not "heros"
-const pluralNames = { Hero: 'Heroes' };
+//const pluralNames = { Hero: 'Heroes' };
  
 export const entityConfig : EntityDataModuleConfig = {
   entityMetadata,
-  pluralNames
+  //pluralNames
 };
