@@ -16,6 +16,8 @@ import { EntityDataModule, EntityDataService } from '@ngrx/data';
 import { entityConfig } from './entity-metadata';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDataServiceService } from './posts/service/post-data-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { PostDataServiceService } from './posts/service/post-data-service.servic
       // autoPause: true, // Pauses recording actions and state changes when the extension window is not open
     }),
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig)
+    EntityDataModule.forRoot(entityConfig),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

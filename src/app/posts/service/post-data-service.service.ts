@@ -28,4 +28,17 @@ export class PostDataServiceService extends DefaultDataService<Post> {
       })
     );
    }
+
+
+
+   
+  override add(post: Post): Observable<Post> {
+    return this.http.post<{ name: string }>(
+      'https://ng-complete-guide-2abc1-default-rtdb.firebaseio.com/post.json',
+      post, 
+    ).pipe(map((data)=>{
+      return {...post,id:data.name}
+    }))
+  }
+
 }
